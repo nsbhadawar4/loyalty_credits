@@ -59,7 +59,7 @@ export default function ExploreBusiness() {
   ];
 
   return (
-    <div>
+    <>
       <CustomTabs
         tabLabels={["Grid View ", "Map View"]}
         tabContents={[
@@ -73,7 +73,7 @@ export default function ExploreBusiness() {
                     justifyContent="space-between"
                     alignItems="center"
                   >
-                    <Typography variant="h5">{item.title}</Typography>
+                    <Typography variant="h3">{item.title}</Typography>
                     <CostumeButton className="successBtn">
                       More details
                     </CostumeButton>
@@ -83,7 +83,12 @@ export default function ExploreBusiness() {
                     {item.category}
                   </Typography>
 
-                  <Typography variant="h5" fontSize={"16px"} mt={1}>
+                  <Typography
+                    variant="h5"
+                    fontSize={"16px"}
+                    color="#020817"
+                    mt={1}
+                  >
                     {item.discount}
                   </Typography>
 
@@ -130,24 +135,6 @@ export default function ExploreBusiness() {
                 </Box>
               </Grid>
             ))}
-            {/* View All Button (Only once) */}
-            <Box mt={4} display="flex" justifyContent="center">
-              <CostumeButton
-                variant="contained"
-                sx={{
-                  background:
-                    "linear-gradient(90deg, #6A5BFF 0%, #A55CFF 100%)",
-                  textTransform: "none",
-                  px: 5,
-                  py: 1.2,
-                  borderRadius: "12px",
-                  fontSize: "16px",
-                  fontWeight: 600,
-                }}
-              >
-                View all
-              </CostumeButton>
-            </Box>
           </Grid>,
           <Grid
             container
@@ -162,6 +149,10 @@ export default function ExploreBusiness() {
           </Grid>,
         ]}
       />
-    </div>
+      {/* View All Button (Only once) */}
+      <Box my={3} display="flex" justifyContent="center">
+        <CostumeButton className="primaryBtn">View all</CostumeButton>
+      </Box>
+    </>
   );
 }

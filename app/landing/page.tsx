@@ -3,6 +3,7 @@ import HomePage from "../components/card-fliter/card";
 import CostumeButton from "../components/button";
 import Topbanner from "../components/home-comp/topbanner";
 import ExploreBusiness from "../components/home-comp/exploreBusiness";
+import AdvantageCard from "../components/home-comp/advantageCard";
 
 const Landing = () => {
   return (
@@ -35,7 +36,8 @@ const Landing = () => {
           </Box>
           <ExploreBusiness />
         </Box>
-        <HomePage />
+        {/* <HomePage /> */}
+        <AdvantageCard />
       </Box>
     </>
   );

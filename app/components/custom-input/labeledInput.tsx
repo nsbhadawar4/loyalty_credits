@@ -90,7 +90,7 @@ function LabeledInputComponent({
               "& .MuiInputBase-root": {
                 borderRadius: "5px",
                 border: "1px solid #DDDDE6",
-                height: "46px",
+                height: "40px",
                 background: "#F3F3F5",
                 // paddingLeft:
                 //   icon && iconPosition === "left"
